@@ -1,0 +1,158 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+@import "plugins";
+@import "project/main";
+
+body.vanilla-modal .modal-hider {
+    position: absolute;
+    left: -99999em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    font-family: Geometria;
+    font-weight: 400;
+    font-size: 16px;
+    color: $blackLight;
+}
+
+.wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.block {
+    height: 100vh;
+
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 35px;
+    color: $blue;
+
+    @include below($notebook) {
+        font-size: 30px;
+    }
+    @include below($tablet) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 35px;
+
+    @include below($notebook) {
+        font-size: 30px;
+    }
+    @include below($tablet) {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 20px;
+
+    @include below($desktop) {
+        font-size: 18px;
+    }
+
+    @include below($tablet) {
+        font-size: 16px;
+    }
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    width: calc(100% - 35px);
+
+    @include below($mobileB) {
+        width: calc(100% - 20px);
+    }
+
+    @include below($mobile) {
+        width: calc(100% - 15px);
+    }
+}
+
+
+//input, textarea, button, select {
+//    outline: none;
+//}
+//
+//input, select {
+//    color: $blue;
+//    border: none;
+//    border-bottom: 1px solid $blue;
+//    padding-bottom: 5px;
+//    cursor: pointer;
+//    background: transparent;
+//
+//    &::placeholder{
+//        color: $blue;
+//    }
+//}
+
+img {
+    width: 100%;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+
+    &text:visited {
+        text-decoration: none
+    }
+
+    &text:hover {
+        text-decoration: none
+    }
+
+    &text:active {
+        text-decoration: none
+    }
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

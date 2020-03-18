@@ -1,0 +1,9 @@
+extends ./layout/default
+include templates/main
+
+
+block vars
+    -pageSettings.title = 'emptyProject';
+
+block content
+    +main()
